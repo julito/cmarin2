@@ -4,6 +4,9 @@
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
+<?php
+$URL = Rutas::ulr();
+?>
 <html lang="es">
 <head>
   <meta charset="utf-8">
@@ -13,19 +16,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="<?php echo $URL;?>/public/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="<?php echo $URL;?>Vistas/public/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="<?php echo $URL;?>/public/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="<?php echo $URL;?>Vistas/public/dist/css/adminlte.min.css">
   <!-- jQuery -->
-<script src="<?php echo $URL;?>/public/plugins/jquery/jquery.min.js"></script>
+<script src="<?php echo $URL;?>Vistas/public/plugins/jquery/jquery.min.js"></script>
               <!-- Sweet alert2 -->
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
               <!-- Datatable -->
-  <link rel="stylesheet" type="text/css" href="<?php echo $URL;?>/public/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo $URL;?>/public/plugins/datatables-responsive/css/responsive.bootstrap4.css">
-  <script type="text/javascript" charset="utf8" src="<?php echo $URL;?>/public/plugins/datatables/jquery.dataTables.js"></script>
-  <script type="text/javascript" charset="utf8" src="<?php echo $URL;?>/public/plugins/datatables-responsive/js/dataTables.responsive.js"></script>
+  <link rel="stylesheet" type="text/css" href="<?php echo $URL;?>Vistas/public/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo $URL;?>Vistas/public/plugins/datatables-responsive/css/responsive.bootstrap4.css">
+  <script type="text/javascript" charset="utf8" src="<?php echo $URL;?>Vistas/public/plugins/datatables/jquery.dataTables.js"></script>
+  <script type="text/javascript" charset="utf8" src="<?php echo $URL;?>Vistas/public/plugins/datatables-responsive/js/dataTables.responsive.js"></script>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -52,7 +55,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="<?php echo $URL;?>/public/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <img src="<?php echo $URL;?>Vistas/public/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Brad Diesel
@@ -83,8 +86,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="<?php echo $URL;?>/admin" class="brand-link">
-      <img src="<?php echo $URL;?>/login/logo.png" alt="Logo" class="brand-image img-circle elevation-4" style="opacity: .8">
+    <a href="<?php echo $URL;?>Vistas/admin" class="brand-link">
+      <img src="<?php echo $URL;?>Vistas/login/logo.png" alt="Logo" class="brand-image img-circle elevation-4" style="opacity: .8">
       <span class="brand-text font-weight-light">Clinica Marín</span>
     </a>
 
@@ -93,10 +96,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="<?php echo $URL;?>/public/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="<?php echo $URL;?>Vistas/public/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="<?php echo $URL;?>/admin/" class="d-block">nombre</a>
+          <a href="<?php echo $URL;?>Vistas/admin/" class="d-block">nombre</a>
         </div>
       </div>
 
@@ -116,13 +119,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?php echo $URL;?>/admin/usuarios" class="nav-link ">
+                <a href="<?php echo $URL;?>Vistas/admin/usuarios" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Listado de usuarios</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo $URL;?>/admin/usuarios/create.php" class="nav-link">
+                <a href="<?php echo $URL;?>Vistas/admin/usuarios/create.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Nuevo usuario</p>
                 </a>
@@ -143,13 +146,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?php echo $URL;?>/admin/pacientes" class="nav-link ">
+                <a href="<?php echo $URL;?>Vistas/admin/pacientes" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Listado de pacientes</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo $URL;?>/admin/pacientes/create.php" class="nav-link">
+                <a href="<?php echo $URL;?>Vistas/admin/pacientes/create.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Nuevo paciente</p>
                 </a>
@@ -170,13 +173,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?php echo $URL;?>/admin/especialidades" class="nav-link ">
+                <a href="<?php echo $URL;?>Vistas/admin/especialidades" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Lista especialidades</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo $URL;?>/admin/especialidades/create.php" class="nav-link">
+                <a href="<?php echo $URL;?>Vistas/admin/especialidades/create.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Nueva especialidad</p>
                 </a>
@@ -197,13 +200,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?php echo $URL;?>/admin/especialistas" class="nav-link ">
+                <a href="<?php echo $URL;?>Vistas/admin/especialistas" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Listado de especialistas</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo $URL;?>/admin/especialistas/create.php" class="nav-link">
+                <a href="<?php echo $URL;?>Vistas/admin/especialistas/create.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Nuevo especialista</p>
                 </a>
@@ -225,7 +228,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="col-sm-6"></div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="btn btn-default"><a href="<?php echo $URL;?>/login/controller_cerrar_session.php">Cerrar sessión</a></li>
+              <li class="btn btn-default"><a href="<?php echo $URL;?>Vistas/login/controller_cerrar_session.php">Cerrar sessión</a></li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -263,8 +266,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
 <!-- Bootstrap 4 -->
-<script src="<?php echo $URL;?>/public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="<?php echo $URL;?>Vistas/public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="<?php echo $URL;?>/public/dist/js/adminlte.min.js"></script>
+<script src="<?php echo $URL;?>Vistas/public/dist/js/adminlte.min.js"></script>
 </body>
 </html>
