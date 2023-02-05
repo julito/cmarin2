@@ -5,4 +5,6 @@ class Rutas
     {
         return 'http://localhost/cmarin2/';
     }
+
+    
 }
