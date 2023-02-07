@@ -1,8 +1,10 @@
 <?php
+require 'Conexion.php';
 class usuariosModelo
 {
-    public static function obtenerUsuarios()
+    static public function obtenerUsuarios()
     {
-
+        $usuarios=Conexion::conex()->query('Select * from tb_usuarios');
+        return $usuarios->fetchAll(PDO::FETCH_ASSOC);
     }
 }

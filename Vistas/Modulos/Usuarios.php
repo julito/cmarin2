@@ -22,7 +22,9 @@
                     <tbody>
                     <?php
                     $contador = 0;
-                 /*    $usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
+                   
+                    $usuarios=usuariosControlador::obtenerUsuarios();
+               
                     foreach ($usuarios as $usuario){
                       $id = $usuario['id_usuario'];
                       $nombres = $usuario['nombres'];
@@ -47,7 +49,7 @@
                           </td>
                       </tr>
                       <?php 
-                     } */
+                     } 
                     ?>
                       
                     </tbody>

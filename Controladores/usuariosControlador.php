@@ -1,7 +1,7 @@
 <?php
 class usuariosControlador
 {
-    public function obtenerUsuarios()
+    public static function obtenerUsuarios()
     {
        $usuarios=usuariosModelo::obtenerUsuarios();
        return $usuarios;

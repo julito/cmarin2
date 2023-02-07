@@ -11,11 +11,13 @@ define ('RUTA_MODULOS',dirname(__FILE__) . SEP . 'Vistas' . SEP . 'Modulos'. SEP
 /******************** CONTROLADORES ****************** */
 require 'Controladores/plantillaControlador.php';
 require 'Controladores/usuariosControlador.php';
+require 'Controladores/pacientesControlador.php';
 
 
 /******************** MODELOS ****************** */
 require 'Modelos/Rutas.php';
 require 'Modelos/usuariosModelo.php';
+require 'Modelos/pacientesModelo.php';
 
 $inicio = new plantillaControlador();
 $inicio->index();
