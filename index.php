@@ -7,9 +7,15 @@ define ('NAMEAPP','Sis Clinica Marin');
 define ('SEP',DIRECTORY_SEPARATOR);//SEPARADOR DE DIRECTORIO
 define ('RUTA_MODULOS',dirname(__FILE__) . SEP . 'Vistas' . SEP . 'Modulos'. SEP);
 
-require 'Controladores/plantillaControlador.php';
 
+/******************** CONTROLADORES ****************** */
+require 'Controladores/plantillaControlador.php';
+require 'Controladores/usuariosControlador.php';
+
+
+/******************** MODELOS ****************** */
 require 'Modelos/Rutas.php';
+require 'Modelos/usuariosModelo.php';
 
 $inicio = new plantillaControlador();
 $inicio->index();

@@ -120,13 +120,13 @@ $URL = Rutas::ulr();
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="<?php echo $URL; ?>Vistas/admin/usuarios" class="nav-link ">
+                                    <a href="<?php echo $URL; ?>usuarios" class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Listado de usuarios</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?php echo $URL; ?>Vistas/admin/usuarios/create.php" class="nav-link">
+                                    <a href="<?php echo $URL; ?>Adduser" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Nuevo usuario</p>
                                     </a>
