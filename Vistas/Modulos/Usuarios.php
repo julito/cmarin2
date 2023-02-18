@@ -32,18 +32,19 @@
                       $cedula = $usuario['cedula'];
                       $celular = $usuario['celular'];
                       $email = $usuario['email'];
+                      $cargo = $usuario['cargo'];
                       $contador=$contador + 1;
                       ?>
                       <tr>
                           <td><?php echo $contador ?></td>
-                          <td><?php echo $nombres ?></td>
-                          <td><?php echo $apellidos ?></td>
-                          <td><?php echo $cedula ?></td>
-                          <td><?php echo $celular ?></td>
-                          <td><?php echo $email ?></td>
+                          <td class="nombres-<?=$id?>"><?php echo $nombres ?></td>
+                          <td class="apellidos-<?=$id?>"><?php echo $apellidos ?></td>
+                          <td class="cedula-<?=$id?>"><?php echo $cedula ?></td>
+                          <td class="celular-<?=$id?>"><?php echo $celular ?></td>
+                          <td class="email-<?=$id?>"><?php echo $email ?></td>
                           <td>
                             <center>
-                            <a type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#usuariosModal">Editar <i class="fas fa-pen"></i></a>
+                            <a type="button" datacargo="<?php echo $cargo ;?>" dataid="<?php echo $id ;?>" class="btn btn-success btn-sm beditaru" data-toggle="modal" data-target="#usuariosModal">Editar <i class="fas fa-pen"></i></a>
                             <a href="<?php echo $URL?>/admin/usuarios/delete.php?id=<?php echo $id;?>" class="btn btn-danger btn-sm">Borrar <i class="fas fa-trash"></i></a>
                             </center>
                           </td>
@@ -65,6 +66,7 @@
 <div class="modal fade" id="usuariosModal" tabindex="-1" role="dialog" aria-labelledby="usuariosModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+    <form method="post">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Usuarios Pacientes</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -74,29 +76,30 @@
       <div class="modal-body">
       
       <!-- Formulario para editar usuario-->
+     
       <div class="card">
                   <div class="card-header" style="background-color: #00A000; color: #ffffff">
                     Tomese su tiempo al llenar los campos
                   </div>
                   <div class="card-body">
-                    
+                    <input type="hidden" name="idue" id="idue">
                     <div class="row">
                       <div class="col-md-4"> 
                         <div class="form-group">
                           <lavel for="">Nombres</lavel>
-                          <input type = "text" name="nombres"  class="form-control" placeholder="Completos" required>
+                          <input type = "text" name="nombrese" id="nombrese"   class="form-control" placeholder="Completos" required>
                         </div>
                       </div>
                       <div class="col-md-4">
                       <div class="form-group">
                           <lavel for="">Apellidos</lavel>
-                          <input type = "text" name="apellidos" class="form-control" placeholder="Completos" required>
+                          <input type = "text" name="apellidose" id="apellidose" class="form-control" placeholder="Completos" required>
                       </div>
                       </div>
                       <div class="col-md-4">
                       <div class="form-group">
                           <lavel for="">Cédula</lavel>
-                          <input type = "text" name="cedula" class="form-control" placeholder="# Cédula" required>
+                          <input type = "text" name="cedulae" id="cedulae" class="form-control" placeholder="# Cédula" required>
                         </div>
                       </div>
                     </div>
@@ -104,17 +107,14 @@
                       <div class="col-md-6">
                       <div class="form-group">
                           <lavel for="">Celular</lavel>
-                          <input type = "number" name="celular" class="form-control" placeholder="# Celular" required>
+                          <input type = "number" name="celulare" id="celulare" class="form-control" placeholder="# Celular" required>
                       </div>
                       </div>
                       <div class="col-md-6">
                       <div class="form-group">
                           <lavel for="">Cargo</lavel>
-                          <select name="cargo" id="" class ="form-control">
-                            
-                            <option value="PUBLICO">PUBLICO</option>
-                            <option value="DOCENTE">DOCENTE</option>
-                            <option value="ESTUDIANTE">ESTUDIANTE</option>
+                          <select name="cargoe" id="cargoe" class ="form-control">
+                            <option value="DIGITADOR">DIGITADOR</option>
                             <option value="ADMINISTRADOR">ADMINISTRADOR</option>
                           </select>
                       </div>
@@ -125,24 +125,32 @@
                       <div class="col-md-4">
                       <div class="form-group">
                           <lavel for="">Correo Electrónico</lavel>
-                          <input type="email" name="email" class="form-control" placeholder="ejemplo@mail.com" required>
+                          <input type="email" name="emaile" id="emaile" class="form-control" placeholder="ejemplo@mail.com" required>
                           
                       </div>
                       </div>
                       <div class="col-md-4"></div>
                     </div>
                     
-                    </form>
+                    
                   </div>
                 </div> 
-                
+              
           <!-- Fin Formulario -->
 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCELAR</button>
-        <button type="button" class="btn btn-success">GUARDAR</button>
+        <input  type="submit" value="Guardar" class="btn btn-success">
       </div>
+      <?php
+      if(isset($_POST['idue']))
+      {
+        usuariosControlador::actualizarUsuario($_POST['idue'],$_POST['nombrese'],$_POST['apellidose'],$_POST['cedulae'],$_POST['celulare'],$_POST['cargoe'],$_POST['emaile']);
+      }
+
+      ?>
+    </form> 
     </div>
   </div>
 </div>

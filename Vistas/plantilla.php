@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<!--
-This is a starter template page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.
--->
+
 <?php
 $URL = Rutas::ulr();
 ?>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -292,6 +289,11 @@ $URL = Rutas::ulr();
     <script src="<?php echo $URL; ?>Vistas/public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="<?php echo $URL; ?>Vistas/public/dist/js/adminlte.min.js"></script>
+
+    <script src="<?php echo $URL; ?>Vistas/public/plugins/jquery/jquery.js"></script>
+
+    <script src="<?php echo $URL; ?>Vistas/public/js/main.js"></script>
+
 </body>
 
 </html>
