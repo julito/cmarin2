@@ -7,9 +7,6 @@
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
-                    <div id="example1_wrapper"></div>
-
-
                   <table id="tabla_usuarios" class="table table-striped table-hover table-bordered table-sm">
                     <thead>
                       <tr>
@@ -46,7 +43,7 @@
                           <td><?php echo $email ?></td>
                           <td>
                             <center>
-                            <a data-toggle="modal" data-target="#Modalusuario" class="btn btn-success btn-sm">Editar <i class="fas fa-pen"></i></a>
+                            <a type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#usuariosModal">Editar <i class="fas fa-pen"></i></a>
                             <a href="<?php echo $URL?>/admin/usuarios/delete.php?id=<?php echo $id;?>" class="btn btn-danger btn-sm">Borrar <i class="fas fa-trash"></i></a>
                             </center>
                           </td>
@@ -61,26 +58,90 @@
                 </div>
               </div>
     <!-- /. Fin de tabla usuarios -->
-    <!-- /.content-header -->
-      </div>
-      <div class="col-sm-1"></div>
-    </div>
 
-    <div class="modal fade" id="Modalusuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    
+<!-- Modal -->
+<div class="modal fade" id="usuariosModal" tabindex="-1" role="dialog" aria-labelledby="usuariosModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Usuarios Pacientes</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-      formulario
+      
+      <!-- Formulario para editar usuario-->
+      <div class="card">
+                  <div class="card-header" style="background-color: #00A000; color: #ffffff">
+                    Tomese su tiempo al llenar los campos
+                  </div>
+                  <div class="card-body">
+                    
+                    <div class="row">
+                      <div class="col-md-4"> 
+                        <div class="form-group">
+                          <lavel for="">Nombres</lavel>
+                          <input type = "text" name="nombres"  class="form-control" placeholder="Completos" required>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                      <div class="form-group">
+                          <lavel for="">Apellidos</lavel>
+                          <input type = "text" name="apellidos" class="form-control" placeholder="Completos" required>
+                      </div>
+                      </div>
+                      <div class="col-md-4">
+                      <div class="form-group">
+                          <lavel for="">Cédula</lavel>
+                          <input type = "text" name="cedula" class="form-control" placeholder="# Cédula" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                      <div class="form-group">
+                          <lavel for="">Celular</lavel>
+                          <input type = "number" name="celular" class="form-control" placeholder="# Celular" required>
+                      </div>
+                      </div>
+                      <div class="col-md-6">
+                      <div class="form-group">
+                          <lavel for="">Cargo</lavel>
+                          <select name="cargo" id="" class ="form-control">
+                            
+                            <option value="PUBLICO">PUBLICO</option>
+                            <option value="DOCENTE">DOCENTE</option>
+                            <option value="ESTUDIANTE">ESTUDIANTE</option>
+                            <option value="ADMINISTRADOR">ADMINISTRADOR</option>
+                          </select>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-4"></div>
+                      <div class="col-md-4">
+                      <div class="form-group">
+                          <lavel for="">Correo Electrónico</lavel>
+                          <input type="email" name="email" class="form-control" placeholder="ejemplo@mail.com" required>
+                          
+                      </div>
+                      </div>
+                      <div class="col-md-4"></div>
+                    </div>
+                    
+                    </form>
+                  </div>
+                </div> 
+                
+          <!-- Fin Formulario -->
+
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCELAR</button>
+        <button type="button" class="btn btn-success">GUARDAR</button>
       </div>
     </div>
   </div>
